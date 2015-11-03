@@ -17,7 +17,6 @@ router.get('/login', (req,res) => {
 // STEP 2: callback from the provider on successful authorization
 router.get('/github/callback', (req,res) => {
   var code = req.query.code;
-  console.log('this is the code: ',code);
   if (code === undefined) {
     return res.status(401).json({ error : 401, message : 'Invalid auth code.' });
   }
