@@ -1,5 +1,6 @@
 angular.module('gistApp', [
-  'ngRoute'
+  'ngRoute',
+  'ngCookies'
 ]);
 
 var gistApp = angular.module('gistApp');
@@ -13,6 +14,9 @@ gistApp.config( ($routeProvider) => {
   .when('/login', {
     templateUrl : 'views/login.html',
     controller : 'loginController'
+  })
+  .when('/auth_token/:access_token', {
+    controller : 'authController'
   })
   .otherwise({
     templateUrl : 'views/404.html'

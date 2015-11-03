@@ -34,7 +34,7 @@ router.get('/github/callback', (req,res) => {
       } else { // everthing worked
         // get token
         // send token back to client
-        res.json({ access_token : access_token });
+        res.redirect('/#/auth_token/' + access_token);
       }
     });
 });
