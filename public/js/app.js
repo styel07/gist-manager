@@ -16,7 +16,16 @@ gistApp.config( ($routeProvider) => {
     controller : 'loginController'
   })
   .when('/auth_token/:access_token', {
-    controller : 'authController'
+    controller : 'authController',
+    templateUrl : 'views/default.html'
+  })
+  .when('/create', {
+    controller : 'createController',
+    templateUrl : 'views/createGist.html'
+  })
+  .when('/edit/:id', {
+    controller : 'createController',
+    templateUrl : 'views/editGist.html'
   })
   .otherwise({
     templateUrl : 'views/404.html'
