@@ -10,3 +10,19 @@ angular.module('gistApp')
     };
 
   }]);
+
+angular.module('gistApp')
+  .service('GistService', ['$http', function($http){
+    var self = this;
+    this.endpoint = 'http://localhost:3000/gists';
+
+    this.getGists = (cookie) => {
+      return $http({
+        method : 'GET',
+        url : self.endpoint,
+        headers : {
+          authorization : 'Bearer ' +  cookie
+        }
+      });
+    }
+  }])

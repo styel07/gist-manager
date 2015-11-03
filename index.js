@@ -13,11 +13,13 @@ const oauth2 = module.exports = new OAuth2(
   null                                // options
 );
 var auth = require('./routes/auth');
+var gists = require('./routes/gists');
 
 app.use(bodyParser.urlencoded({ extended : true })); // gives the ability body parser
 
 app.use(express.static('./public'));
 app.use('/auth', auth);
+app.use('/gists', gists);
 app.get('/', (req, res) => {
   res.render('index');
 });

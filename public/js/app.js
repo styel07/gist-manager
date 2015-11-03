@@ -24,14 +24,17 @@ gistApp.config( ($routeProvider) => {
     templateUrl : 'views/createGist.html'
   })
   .when('/edit/:id', {
-    controller : 'createController',
+    controller : 'editController',
     templateUrl : 'views/editGist.html'
   })
   .otherwise({
     templateUrl : 'views/404.html'
   });
 })
-.run(['$rootScope', ($rootScope) => {
+.run(['$rootScope', '$injector', ($rootScope, $injector) => {
   // run things
-
+  $injector.get('$http').defaults.tranformRequest = (data, headersGetter) => {
+    console.log(data);
+    console.log(headersGetter);
+  }
 }]);
