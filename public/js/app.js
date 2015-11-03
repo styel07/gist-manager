@@ -4,14 +4,15 @@ angular.module('gistApp', [
 
 var gistApp = angular.module('gistApp');
 
-gistApp.config( ($routeProvider)=> {
+gistApp.config( ($routeProvider) => {
   // routes
   $routeProvider
   .when('/', {
     templateUrl : 'views/default.html'
   })
   .when('/login', {
-    templateUrl : 'views/login.html'
+    templateUrl : 'views/login.html',
+    controller : 'loginController'
   })
   .otherwise({
     templateUrl : 'views/404.html'
