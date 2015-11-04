@@ -12,10 +12,12 @@ angular.module('gistApp')
       $scope.GistService = GistService;
       $scope.cookies = userCookie;
       $scope.gist_id = $routeParams.gist_id;
+      $scope.process_done = () => {
+        $window.location.href = '/#/dashboard';
+      };
 
       if (userCookie) {
         GistService.singleGist(userCookie, $routeParams.gist_id)
-
           .success((gist) => {
             console.log(gist);
             var filesArray = [];

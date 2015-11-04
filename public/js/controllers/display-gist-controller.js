@@ -19,13 +19,18 @@ angular.module('gistApp')
         GistService.getGists(userCookie)
           .success((gists) => {
             $scope.gists = gists;
-            $scope.displayGist = gists[0];
+
+            GistService.singleGist(userCookie, gists[0].id)
+            .success( (gist) => {
+              $scope.displayGist = gist;
+            });
+
             $scope.display = (id) => {
               GistService.singleGist(userCookie, id)
               .success( (gist)=> {
                 $scope.displayGist = gist;
               });
-            }
+            };
           });
       } else {
         $window.location.href = '/#/login';

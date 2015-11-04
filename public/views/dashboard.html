@@ -5,7 +5,6 @@
 <div>
   <a type="button" ng-href="/#/create">Create</a>
   <a type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
-  <!-- <a type="button" ng-href="{{ displayGist.id }}">Delete</a> -->
 </div>
 <div>
   <ul>
@@ -20,5 +19,17 @@
 </div>
 
 <div>
-  display: {{ displayGist.description }} {{ displayGist.files }}
+  <div ng-repeat="file in displayGist.files">
+    <fieldset>
+      <div>
+        <label for="">Description: {{ displayGist.description }}</label>
+      </div>
+      <div>
+        <label for="">File Name: {{ file.filename }}</label>
+      </div>
+      <div>
+        <label for="">File Content: {{ file.content }}</label>
+      </div>
+    </fieldset>
+  </div>
 </div>
