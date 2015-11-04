@@ -52,4 +52,14 @@ angular.module('gistApp')
       });
     };
 
+    this.singleGist = (cookie, id) => {
+      return $http({
+        method : 'GET',
+        url : self.endpoint + '/' + id,
+        headers : {
+          authorization : 'Bearer ' + cookie
+        }
+      });
+    }
+
   }]);
