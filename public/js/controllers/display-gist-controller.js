@@ -10,7 +10,7 @@ angular.module('gistApp')
       if (userCookie) {
         console.log($routeParams);
         console.log($routeParams.gist_id);
-        $scope.gist = {};
+        $scope.displayGist = {};
         $scope.gists = [];
         $scope.GistService = GistService;
         $scope.cookies = userCookie;
@@ -19,12 +19,13 @@ angular.module('gistApp')
         GistService.getGists(userCookie)
           .success((gists) => {
             $scope.gists = gists;
-          });
-
-        // gets a single gist
-        GistService.singleGist(userCookie, $routeParams.gist_id)
-          .success((gist) => {
-            $scope.gist = gist;
+            $scope.displayGist = gists[0];
+            $scope.display = (id) => {
+              GistService.singleGist(userCookie, id)
+              .success( (gist)=> {
+                $scope.displayGist = gist;
+              });
+            }
           });
       } else {
         $window.location.href = '/#/login';

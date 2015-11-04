@@ -21,9 +21,9 @@ gistApp.config( ($routeProvider) => {
     controller : 'authController',
     templateUrl : 'views/default.html'
   })
-  .when('/dashboard/:gist_id', {
+  .when('/dashboard/', {
     controller : 'displayController',
-    templateUrl : 'views/default.html'
+    templateUrl : 'views/dashboard.html'
   })
   .when('/create', {
     controller : 'createController',

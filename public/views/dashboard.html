@@ -1,0 +1,24 @@
+<h1>Home Page</h1>
+<div>
+  <a type="button" ng-href="{{ gists }}">List Gists</a>
+</div>
+<div>
+  <a type="button" ng-href="/#/create">Create</a>
+  <a type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
+  <!-- <a type="button" ng-href="{{ displayGist.id }}">Delete</a> -->
+</div>
+<div>
+  <ul>
+    <li ng-repeat="gist in gists">
+
+      <div ng-click="display(gist.id)" style="background : #eee; ">{{ gist.description }}</div>
+      <ul>
+        <li ng-repeat="file in gist.files">{{ file.filename }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div>
+  display: {{ displayGist.description }} {{ displayGist.files }}
+</div>
