@@ -86,8 +86,21 @@ router
       }
       res.json(body);
     });
+  })
+  .delete((req, res) => {
+    console.log(req);
+    request.del({
+      url : 'https://api.github.com/gists/' + req.params.id,
+      headers : {
+        Authorization : 'Bearer ' + req.access_token,
+        'User-Agent' : 'Node'
+      }
+    }, (err, response, body) => {
+      if (err) {
+        return res.status(500).json(err);
+      }
+    });
   });
-
 function getAuthBearerToken (req, res, next) {
   if (!req.headers.hasOwnProperty('authorization')) {
     return res.status(401).json(

@@ -81,4 +81,14 @@ angular.module('gistApp')
       });
     };
 
+    this.deleteGist = (cookie, id) => {
+      return $http({
+        method : 'DELETE',
+        url : self.endpoint + '/' + id,
+        headers : {
+          authorization : 'Bearer ' +  cookie
+        }
+      });
+    }
+
   }]);
