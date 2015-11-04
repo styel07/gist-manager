@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 3000;
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 var OAuth2 = require('oauth').OAuth2;
 const oauth2 = module.exports = new OAuth2(
   process.env.GITHUB_CLIENT_ID,       // client id
@@ -17,6 +18,14 @@ var gists = require('./routes/gists');
 
 app.use(bodyParser.urlencoded({ extended : true })); // gives the ability body parser
 app.use(bodyParser.json()); // gives the ability body parser
+app.use(methodOverride((req,res) => {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    var method = req.body._method;
+
+    delete req.body._method;
+    return method;
+  }
+}));
 
 app.use(express.static('./public'));
 app.use('/auth', auth);

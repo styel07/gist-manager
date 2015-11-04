@@ -60,6 +60,25 @@ angular.module('gistApp')
           authorization : 'Bearer ' + cookie
         }
       });
-    }
+    };
+
+    this.editGist = (cookie, input, id) => {
+      var data = {
+            description : input.description,
+            public : true,
+            files : {}
+          };
+
+      data.files[input.filename] = { content : input.fileContent };
+
+      return $http({
+        method : 'PATCH',
+        url : self.endpoint + '/' + id,
+        data : data,
+        headers : {
+          authorization : 'Bearer ' +  cookie
+        }
+      });
+    };
 
   }]);

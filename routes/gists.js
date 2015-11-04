@@ -24,8 +24,6 @@ router
 
   // create a new gist from the contents of req.body, asks git to make a new git for you
   .post((req,res) => {
-    console.log('this is body!:', req.body);
-
     request.post({
     // first aregument to POST
     url : 'https://api.github.com/gists',
@@ -39,7 +37,6 @@ router
       public : true,
       files : req.body.files
     }
-    // second argument from POST
   },
     (err, response, body) => {
       if (err) {
@@ -50,6 +47,7 @@ router
     });
   });
 
+// edit a gist
 router
   .route('/:id')
   .all(getAuthBearerToken)
@@ -66,6 +64,27 @@ router
         return res.status(500).json(err);
       }
       res.json(JSON.parse(body));
+    });
+  })
+  .patch((req,res) => {
+    console.log(req.body);
+    request.patch({
+      url : 'https://api.github.com/gists/' + req.params.id,
+      json : true,
+      headers : {
+        Authorization : 'Bearer ' + req.access_token,
+        'User-Agent' : 'Node'
+      },
+      body : {
+        description : req.body.description,
+        public : true,
+        files : req.body.files
+      }
+    }, (err, response, body) => {
+      if (err) {
+        return res.status(500).json(err);
+      }
+      res.json(body);
     });
   });
 

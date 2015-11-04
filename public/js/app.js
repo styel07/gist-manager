@@ -29,7 +29,7 @@ gistApp.config( ($routeProvider) => {
     controller : 'createController',
     templateUrl : 'views/createGist.html'
   })
-  .when('/edit/:id', {
+  .when('/edit/:gist_id', {
     controller : 'editController',
     templateUrl : 'views/editGist.html'
   })

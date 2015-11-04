@@ -10,10 +10,6 @@ angular.module('gistApp')
         $scope.gists = [];
         $scope.GistService = GistService;
         $scope.cookies = userCookie;
-        // GistService.getGists(userCookie)
-        //   .success((gists) => {
-        //     $scope.gists = gists;
-        //   });
       } else {
         $window.location.href = '/#/login';
       }

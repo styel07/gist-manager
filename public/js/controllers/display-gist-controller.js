@@ -14,10 +14,14 @@ angular.module('gistApp')
         $scope.gists = [];
         $scope.GistService = GistService;
         $scope.cookies = userCookie;
+
+        // gets all gists
         GistService.getGists(userCookie)
           .success((gists) => {
             $scope.gists = gists;
           });
+
+        // gets a single gist
         GistService.singleGist(userCookie, $routeParams.gist_id)
           .success((gist) => {
             $scope.gist = gist;
