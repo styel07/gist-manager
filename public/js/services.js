@@ -31,5 +31,25 @@ angular.module('gistApp')
           authorization : 'Bearer ' +  cookie
         }
       });
-    }
+    };
+
+    this.postGists = (cookie, input) => {
+      var data = {
+            description : input.description,
+            public : true,
+            files : {}
+          };
+
+      data.files[input.filename] = { content : input.fileContent };
+
+      return $http({
+        method : 'POST',
+        url : self.endpoint,
+        data : data,
+        headers : {
+          authorization : 'Bearer ' +  cookie
+        }
+      });
+    };
+
   }]);

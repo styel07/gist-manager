@@ -2,11 +2,19 @@
 <div>
   <fieldset>
     <div>
-      {{ gists }}
-      <label for="">Title</label>
-        <input type="text" id="gist-title" type="text" ng-model="new_gists">
-      <label for=""> Body</label>
-        <input type="text" id="gist-body" type="text" ng-model="new_gists">
+      <label for="new_gist_file">File Name</label>
+      <input id="new_gist_file" type="text" ng-model="new_gist.filename">
+    </div>
+       <div>
+      <label for="new_gist_description">Description</label>
+      <input id="new_gist_decription" type="text" ng-model="new_gist.description">
+    </div>
+    <div>
+      <label for="new_gist_content">Content</label>
+      <input id="new_gist_content" type="text" ng-model="new_gist.fileContent">
+    </div>
+    <div>
+      <button type="button" ng-click="GistService.postGists(cookies, new_gist); new_gist={};">Create Gist</button>
     </div>
   </fieldset>
 </div>
