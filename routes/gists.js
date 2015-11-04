@@ -42,7 +42,6 @@ router
       if (err) {
         return res.status(500).json(err);
       }
-    console.log(res);
       res.json(body);
     });
   });
@@ -67,7 +66,6 @@ router
     });
   })
   .patch((req,res) => {
-    console.log(req.body);
     request.patch({
       url : 'https://api.github.com/gists/' + req.params.id,
       json : true,
@@ -88,7 +86,6 @@ router
     });
   })
   .delete((req, res) => {
-    console.log(req);
     request.del({
       url : 'https://api.github.com/gists/' + req.params.id,
       headers : {
