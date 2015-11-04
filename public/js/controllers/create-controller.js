@@ -3,12 +3,17 @@ angular.module('gistApp')
     '$scope',
     '$cookies',
     'GistService',
-    ($scope, $cookies, GistService) => {
+    '$window',
+    ($scope, $cookies, GistService, $window, authorized) => {
       var userCookie = $cookies.get('access_token');
-      $scope.gists = [];
-      GistService.getGists(userCookie)
-        .success((gists) => {
-          $scope.gists = gists;
-      });
+      if (userCookie) {
+        $scope.gists = [];
+        GistService.getGists(userCookie)
+          .success((gists) => {
+            $scope.gists = gists;
+          });
+      } else {
+        $window.location.href = '/#/login';
+      }
     }
   ]);

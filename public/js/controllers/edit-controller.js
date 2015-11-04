@@ -1,5 +1,5 @@
 angular.module('gistApp')
-  .controller('createController', [
+  .controller('editController', [
     '$scope',
     '$cookies',
     'GistService',

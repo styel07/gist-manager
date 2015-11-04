@@ -1,5 +1,6 @@
+'use strict';
 angular.module('gistApp')
-  .service('OAuthService', ['$http', function($http){
+  .service('OAuthService', ['$http', '$cookies', function($http, $cookies){
     var self = this;
 
     // this endpoint points from express to angular
@@ -9,9 +10,15 @@ angular.module('gistApp')
       return $http.get(self.endpoint);
     };
 
-  }]);
+    this.checkToken = () => {
+      if ($cookies.get('access_token')) {
+        return true;
+      } else {
+        return false;
+      }
+    };
 
-angular.module('gistApp')
+  }])
   .service('GistService', ['$http', function($http){
     var self = this;
     this.endpoint = 'http://localhost:3000/gists';
@@ -25,4 +32,4 @@ angular.module('gistApp')
         }
       });
     }
-  }])
+  }]);
