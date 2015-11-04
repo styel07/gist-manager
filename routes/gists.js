@@ -5,7 +5,8 @@ var request = require('request');
 
 router
   .route('/')
-  .get(getAuthBearerToken, (req, res) => {
+  .all(getAuthBearerToken)
+  .get((req, res) => {
     request.get({
       url : 'https://api.github.com/gists',
       headers : {
@@ -22,7 +23,9 @@ router
   })
 
   // create a new gist from the contents of req.body, asks git to make a new git for you
-  .post(getAuthBearerToken, (req,res) => {
+  .post((req,res) => {
+    console.log('this is body!:', req.body);
+
     request.post({
     // first aregument to POST
     url : 'https://api.github.com/gists',
@@ -44,6 +47,25 @@ router
       }
     console.log(res);
       res.json(body);
+    });
+  });
+
+router
+  .route('/:id')
+  .all(getAuthBearerToken)
+
+  .get((req, res) => {
+    request.get({
+      url : 'https://api.github.com/gists/' + req.params.id,
+      headers : {
+        Authorization : 'Bearer ' + req.access_token,
+        'User-Agent' : 'Node'
+      }
+    }, (err, response, body) => {
+      if (err) {
+        return res.status(500).json(err);
+      }
+      res.json(JSON.parse(body));
     });
   });
 

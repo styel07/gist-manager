@@ -21,23 +21,17 @@ gistApp.config( ($routeProvider) => {
     controller : 'authController',
     templateUrl : 'views/default.html'
   })
+  .when('/dashboard/:gist_id', {
+    controller : 'displayController',
+    templateUrl : 'views/default.html'
+  })
   .when('/create', {
     controller : 'createController',
-    templateUrl : 'views/createGist.html',
-    resolve : {
-      authorized : function ($q, OAuthService) {
-        return $q.when(OAuthService.checkToken);
-      }
-    }
+    templateUrl : 'views/createGist.html'
   })
   .when('/edit/:id', {
     controller : 'editController',
-    templateUrl : 'views/editGist.html',
-    resolve : {
-      authorized : function ($q, OAuthService) {
-        return $q.when(OAuthService.checkToken);
-      }
-    }
+    templateUrl : 'views/editGist.html'
   })
   .otherwise({
     templateUrl : 'views/404.html'
