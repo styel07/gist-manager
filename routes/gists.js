@@ -23,7 +23,6 @@ router
 
   // create a new gist from the contents of req.body, asks git to make a new git for you
   .post(getAuthBearerToken, (req,res) => {
-    console.log('this is body!:', req.body);
     request.post({
     // first aregument to POST
     url : 'https://api.github.com/gists',
@@ -43,6 +42,7 @@ router
       if (err) {
         return res.status(500).json(err);
       }
+    console.log(res);
       res.json(body);
     });
   });
