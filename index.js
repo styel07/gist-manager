@@ -16,6 +16,7 @@ const oauth2 = module.exports = new OAuth2(
 var auth = require('./routes/auth');
 var gists = require('./routes/gists');
 
+app.set('view engine', 'html');
 app.use(bodyParser.urlencoded({ extended : true })); // gives the ability body parser
 app.use(bodyParser.json()); // gives the ability body parser
 app.use(methodOverride((req,res) => {
@@ -33,6 +34,10 @@ app.use('/gists', gists);
 
 app.get('/', (req, res) => {
   res.render('index');
+});
+
+app.get('/*', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html')
 });
 
 app.listen(PORT, () => {
