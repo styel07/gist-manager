@@ -47,32 +47,43 @@ hr {
   background-color: #8DC2B1;
   padding-left: 20px; }
 
-/* line 58, stdin */
+/* line 55, stdin */
 .sidebar {
   width: 80%;
   margin-right: auto;
   margin-left: auto; }
 
-/* line 64, stdin */
+/* line 61, stdin */
+#editcontainer {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* line 68, stdin */
 #left-sidebar {
   height: 100%;
   border-right: 1px solid black;
-  box-shadow: 5px 0px 5px #AAA; }
+  box-shadow: 5px 0px 6px #AAA; }
 
-/* line 70, stdin */
-input {
+/* line 74, stdin */
+input#searchBar {
   margin-bottom: 5px;
   margin-top: 5px;
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #309C92;
+  color: black;
+  background-color: #8DC2B1;
+  font-size: 1.5em;
+  color: white; }
 
-/* line 76, stdin */
+/* line 88, stdin */
 ul {
   list-style-type: none; }
-  /* line 78, stdin */
+  /* line 90, stdin */
   ul li {
     text-decoration: none; }
 
-/* line 83, stdin */
+/* line 95, stdin */
 a {
   color: black;
   text-decoration: none; }

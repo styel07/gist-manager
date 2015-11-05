@@ -81,6 +81,6 @@ angular.module('gistApp')
           authorization : 'Bearer ' +  cookie
         }
       });
-    }
+    };
 
   }]);

@@ -42,9 +42,9 @@ hr {
   margin-bottom : 1.5rem;
 }
 .style-two {
-    border : 0;
-    height : 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  border : 0;
+  height : 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 #description-header {
@@ -52,25 +52,37 @@ hr {
   padding-left : 20px;
 }
 
-.columns {
-}
-
-.sidebar {
+.sidebar{
   width : 80%;
   margin-right : auto;
   margin-left : auto;
 }
 
+#editcontainer {
+  width : 60%;
+  margin-right : auto;
+  margin-left : auto;
+}
+
+
 #left-sidebar {
   height : 100%;
   border-right : 1px solid black;
-  box-shadow : 5px 0px 5px #AAA;
+  box-shadow : 5px 0px 6px #AAA;
 }
 
-input {
-    margin-bottom : 5px;
-    margin-top : 5px;
-    width : 100%;
+input#searchBar{
+  margin-bottom : 5px;
+  margin-top : 5px;
+  width : 100%;
+  border : 1px solid #309C92;
+  color : black;
+  background-color : #8DC2B1;
+  font-size: 1.5em;
+  color : white;
+}
+
+input#search[placeholder] {
 }
 
 ul {
