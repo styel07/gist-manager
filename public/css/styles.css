@@ -1,4 +1,24 @@
+/* line 2, stdin */
+body {
+  background-color: #eee; }
+
+/* line 6, stdin */
 h1 {
   font-family: "Times New Roman", Georgia, Serif;
-  font-size: 50px;
-}
+  font-size: 50px; }
+
+/* line 11, stdin */
+.row {
+  background-color: #fff; }
+
+/* line 15, stdin */
+.column {
+  border: 1px solid black; }
+
+/* line 19, stdin */
+ul {
+  list-style-type: none; }
+
+/* line 23, stdin */
+a {
+  text-decoration: none; }

@@ -1,32 +1,44 @@
 <h1>Home Page</h1>
-<div>
-  <a type="button" ng-href="/#/create">Create</a>
-  <a type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
-</div>
-<div>
-  <ul>
-    <li ng-repeat="gist in gists">
 
-      <div ng-click="display(gist.id)" style="background : #eee; ">{{ gist.description }}</div>
+<div class="container">
+
+  <div class="row">
+    <div class="four columns">
       <ul>
-        <li ng-repeat="file in gist.files">{{ file.filename }}</li>
+        <li ng-repeat="gist in gists">
+          <div ng-click="display(gist.id)" style="background : #eee; "> <a href="">{{ gist.description }}</a>
+          </div>
+          <ul>
+            <li ng-repeat="file in gist.files">{{ file.filename }}</li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-</div>
+    </div>
 
-<div>
-  <div ng-repeat="file in displayGist.files">
-    <fieldset>
-      <div>
-        <label for="">Description: {{ displayGist.description }}</label>
+    <div class="eight columns">
+
+      <div class="row">
+        <a type="button" ng-href="/#/create">Create</a>
+        <a type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
       </div>
-      <div>
-        <label for="">File Name: {{ file.filename }}</label>
+
+      <div class="row">
+        <div ng-repeat="file in displayGist.files">
+          <fieldset>
+            <div>
+              <label for="">Description: {{ displayGist.description }}</label>
+            </div>
+            <div>
+              <label for="">File Name: {{ file.filename }}</label>
+            </div>
+            <div>
+              <label for="">File Content: {{ file.content }}</label>
+            </div>
+          </fieldset>
+        </div>
       </div>
-      <div>
-        <label for="">File Content: {{ file.content }}</label>
-      </div>
-    </fieldset>
+
+    </div>
   </div>
+
 </div>

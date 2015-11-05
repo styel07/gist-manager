@@ -20,6 +20,7 @@ angular.module('gistApp')
           .success((gists) => {
             $scope.gists = gists;
 
+            // gets a single gist in the array
             GistService.singleGist(userCookie, gists[0].id)
             .success( (gist) => {
               $scope.displayGist = gist;
