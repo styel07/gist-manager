@@ -3,11 +3,32 @@ body {
   background-color : #eee;
 }
 
+#header {
+  background-color : #3B9476;
+  border-top-right-radius : 1em;
+  border-top-left-radius : 1em;
+
+  h1 {
+    color : white;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, .3)
+  }
+}
+
+div.row.main {
+  height : 100%;
+  border-bottom-right-radius : 1em;
+  border-bottom-left-radius : 1em;
+}
+
 .row {
   background-color : #fff;
 
+
   h1 {
     text-align : center;
+    padding-top : 20px;
+    padding-bottom : 15px;
+    margin-bottom : 0px;
   }
 
   p {
@@ -17,18 +38,39 @@ body {
 
 /* Gradient transparent - color - transparent */
 
-hr.style-two {
-    border: 0;
-    height: 2px;
+hr {
+  margin-bottom : 1.5rem;
+}
+.style-two {
+    border : 0;
+    height : 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#description-header {
+  background-color : #8DC2B1;
+  padding-left : 20px;
 }
 
 .columns {
 }
 
+.sidebar {
+  width : 80%;
+  margin-right : auto;
+  margin-left : auto;
+}
+
 #left-sidebar {
-  border-right: 1px solid black;
-   box-shadow: 5px 0px 5px #AAA;
+  height : 100%;
+  border-right : 1px solid black;
+  box-shadow : 5px 0px 5px #AAA;
+}
+
+input {
+    margin-bottom : 5px;
+    margin-top : 5px;
+    width : 100%;
 }
 
 ul {
@@ -39,5 +81,6 @@ ul {
 }
 
 a {
+    color : black;
   text-decoration : none;
 }
