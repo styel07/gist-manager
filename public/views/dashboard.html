@@ -1,21 +1,33 @@
 
 <div class="container">
-  <div class="row">
+  <div class="row" id="header">
     <h1>Gist Manager</h1>
-    <hr class="style-two">
   </div>
 
   <div class="row">
+    <hr class="style-two">
+  </div>
+
+  <div class="row main">
+
     <div class="four columns" id="left-sidebar">
-      <ul>
-        <li ng-repeat="gist in gists">
-          <div ng-click="display(gist.id)" style="background : #eee; "> <a href="">{{ gist.description }}</a>
-          </div>
-          <ul>
-            <li ng-repeat="file in gist.files">{{ file.filename }}</li>
-          </ul>
-        </li>
-      </ul>
+
+      <div class="row sidebar">
+        <input id="searchBar" type="text" placeholder="Search" ng-model="searchGist" />
+      </div>
+
+      <div class="row sidebar">
+        <ul>
+          <li ng-repeat="gist in gists | filter:searchGist">
+            <div ng-click="display(gist.id)" id="description-header"> <a href="">{{ gist.description }}</a>
+            </div>
+            <ul>
+              <li ng-repeat="file in gist.files">{{ file.filename }}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="eight columns">
@@ -40,6 +52,7 @@
       </div>
 
     </div>
+
   </div>
 
 </div>
