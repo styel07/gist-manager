@@ -1,11 +1,9 @@
-<h1>Home Page</h1>
-
-<a type="button" ng-href="{{ listURL }}">List Gists</a>
-<a type="button" ng-href="{{ createURL }}">Create</a>
-<a type="button" ng-href="{{ editURL }}">Edit</a>
-<a type="button" ng-href="{{ deleteURL }}">Delete</a>
-
-
-<div>
-  {{ gists }}
+<div class="container">
+  <div class="row">
+    <h1>Home Page</h1>
+  </div>
+  <div class="row">
+    <a class="button" ng-href="/#/dashboard">Dashboard</a>
+    <a class="button" ng-href="{{ authURL.url }}">Login With Github</a>
+  </div>
 </div>

@@ -8,8 +8,6 @@ angular.module('gistApp')
     ($scope, $cookies, GistService, $window, $routeParams) => {
       var userCookie = $cookies.get('access_token');
       if (userCookie) {
-        console.log($routeParams);
-        console.log($routeParams.gist_id);
         $scope.displayGist = {};
         $scope.gists = [];
         $scope.GistService = GistService;
@@ -34,7 +32,7 @@ angular.module('gistApp')
             };
           });
       } else {
-        $window.location.href = '/#/login';
+        $window.location.href = '/#/';
       }
     }
   ]);
