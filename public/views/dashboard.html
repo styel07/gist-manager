@@ -1,6 +1,11 @@
-<h1>Home Page</h1>
 
 <div class="container">
+  <div class="row">
+    <h1>Gist Manager</h1>
+  </div>
+  <div class="row">
+    <h5>Home Page</h5>
+  </div>
 
   <div class="row">
     <div class="four columns">
@@ -24,17 +29,15 @@
 
       <div class="row">
         <div ng-repeat="file in displayGist.files">
-          <fieldset>
-            <div>
-              <label for="">Description: {{ displayGist.description }}</label>
-            </div>
-            <div>
-              <label for="">File Name: {{ file.filename }}</label>
-            </div>
-            <div>
-              <label for="">File Content: {{ file.content }}</label>
-            </div>
-          </fieldset>
+          <div>
+            <label for="">Description: {{ displayGist.description }}</label>
+          </div>
+          <div>
+            <label for="">File Name: {{ file.filename }}</label>
+          </div>
+          <div>
+            <p>File Content: {{ file.content }}</p>
+          </div>
         </div>
       </div>
 

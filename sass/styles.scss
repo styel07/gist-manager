@@ -5,6 +5,14 @@ body {
 
 .row {
   background-color : #fff;
+
+  h1, h5 {
+    text-align : center;
+  }
+
+  p{
+    word-wrap : break-word;
+  }
 }
 
 .column {
