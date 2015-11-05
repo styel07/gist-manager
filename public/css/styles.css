@@ -12,17 +12,25 @@ body {
   .row p {
     word-wrap: break-word; }
 
-/* line 18, stdin */
-.columns {
-  border: 1px solid black; }
+/* Gradient transparent - color - transparent */
+/* line 20, stdin */
+hr.style-two {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
 
-/* line 22, stdin */
+/* line 29, stdin */
+#left-sidebar {
+  border-right: 1px solid black;
+  box-shadow: 5px 0px 5px #AAA; }
+
+/* line 34, stdin */
 ul {
   list-style-type: none; }
-  /* line 24, stdin */
+  /* line 36, stdin */
   ul li {
     text-decoration: none; }
 
-/* line 29, stdin */
+/* line 41, stdin */
 a {
   text-decoration: none; }

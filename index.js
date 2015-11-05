@@ -27,8 +27,8 @@ app.use(methodOverride((req,res) => {
     return method;
   }
 }));
-
-app.use(express.static('./public'));
+console.log(__dirname);
+app.use(express.static(__dirname + '/public'));
 app.use('/auth', auth);
 app.use('/gists', gists);
 
@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/*', function(req, res) {
-  res.sendFile(__dirname + '/public/index.html')
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(PORT, () => {
