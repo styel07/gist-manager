@@ -2,23 +2,27 @@
 body {
   background-color: #eee; }
 
+/* line 6, stdin */
 .row {
   background-color: #fff; }
-  /* line 10, stdin */
-  .row h1, .row h5 {
+  /* line 9, stdin */
+  .row h1 {
     text-align: center; }
-  /* line 14, stdin */
+  /* line 13, stdin */
   .row p {
     word-wrap: break-word; }
 
-/* line 19, stdin */
-.column {
+/* line 18, stdin */
+.columns {
   border: 1px solid black; }
 
-/* line 23, stdin */
+/* line 22, stdin */
 ul {
   list-style-type: none; }
+  /* line 24, stdin */
+  ul li {
+    text-decoration: none; }
 
-/* line 27, stdin */
+/* line 29, stdin */
 a {
   text-decoration: none; }
