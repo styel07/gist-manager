@@ -5,7 +5,7 @@ angular.module('gistApp', [
 
 var gistApp = angular.module('gistApp');
 
-gistApp.config( ($routeProvider) => {
+gistApp.config( ($routeProvider, $locationProvider) => {
   // auth
 
   // routes
@@ -36,6 +36,9 @@ gistApp.config( ($routeProvider) => {
   .otherwise({
     templateUrl : 'views/404.html'
   });
+
+  // location
+  $locationProvider.html5Mode(true);
 })
 .run(['$rootScope', ($rootScope) => {
   // run things

@@ -10,7 +10,7 @@ angular.module('gistApp')
       $scope.deleteURL = '/#/delete';
 
       $cookies.put('access_token', $routeParams.access_token);
-      $window.location.href = '/dashboard/';
+      $window.location.href = '/#/dashboard/';
       console.log('You get a Cookie!', $cookies.get('access_token'));
     }
   ]);
