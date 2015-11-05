@@ -33,7 +33,7 @@ angular.module('gistApp')
             };
           });
       } else {
-        $window.location.href = '/#/login';
+        $window.location.href = '/#/';
       }
     }
   ]);

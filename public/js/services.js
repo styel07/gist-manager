@@ -10,14 +10,6 @@ angular.module('gistApp')
       return $http.get(self.endpoint);
     };
 
-    this.checkToken = () => {
-      if ($cookies.get('access_token')) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-
   }])
   .service('GistService', ['$http', function($http){
     var self = this;

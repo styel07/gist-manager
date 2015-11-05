@@ -16,7 +16,7 @@ angular.module('gistApp')
         $scope.GistService = GistService;
         $scope.cookies = userCookie;
       } else {
-        $window.location.href = '/#/login';
+        $window.location.href = '/#/';
       }
     }
   ]);
