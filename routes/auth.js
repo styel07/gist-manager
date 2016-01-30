@@ -31,7 +31,8 @@ router.get('/github/callback', (req,res) => {
         res.status(401).json(err);
       } else if ( results.error ) {
         res.status(401).json(results.error);
-      } else { // everthing worked
+      } else {
+        // everthing worked
         // get token
         // send token back to client
         res.redirect('/#/auth_token/' + access_token);
