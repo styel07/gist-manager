@@ -19,7 +19,6 @@ angular.module('gistApp')
       if (userCookie) {
         GistService.singleGist(userCookie, $routeParams.gist_id)
           .success((gist) => {
-            console.log(gist);
             var filesArray = [];
             var files = gist.files;
 
