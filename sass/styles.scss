@@ -68,7 +68,7 @@ hr {
 #left-sidebar {
   height : 100%;
   border-right : 1px solid black;
-  box-shadow : 5px 0px 6px #AAA;
+  box-shadow : 5px 3px 3px #AAA;
 }
 
 input#searchBar{
@@ -79,10 +79,10 @@ input#searchBar{
   color : black;
   background-color : #8DC2B1;
   font-size: 1.5em;
-  color : white;
 }
 
 input#search[placeholder] {
+  color:black;
 }
 
 ul {
