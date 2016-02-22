@@ -1,26 +1,27 @@
 <div class="container">
-<!-- Page Layout here -->
   <div class="row">
 
-    <div class="col s12 m4 l3">
-      <div class="row sidebar">
-        <input id="searchBar" type="text" placeholder="Gist Title" ng-model="searchGist" />
-      </div>
+    <div class="col s12 m4 l3" id="left-panel">
 
-      <div class="row sidebar">
-        <ul>
-          <li ng-repeat="gist in gists | filter:searchGist">
-            <div ng-click="display(gist.id)" id="description-header"> <a href="">{{ gist.description }}</a>
-            </div>
-            <ul>
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <input id="searchBar" type="text" placeholder="Gist Title" ng-model="searchGist" />
+        </li>
+
+        <a href="#">
+          <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
+            {{ gist.description }}
+            <ul class="collection">
               <li ng-repeat="file in gist.files">{{ file.filename }}</li>
             </ul>
           </li>
-        </ul>
-      </div>
+        </a>
+
+      </ul>
+
     </div>
 
-    <div class="col s12 m8 l9">
+    <div class="col s12 m8 l9" id="right-panel">
         <div class="row">
           <a class="button" type="button" ng-href="/#/create">Create</a>
           <a class="button" type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>

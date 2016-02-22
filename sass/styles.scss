@@ -1,4 +1,4 @@
-// sass styles
+// ------------- Body
 body {
   background-color : #4CAF50;
 }
@@ -14,12 +14,6 @@ body {
     font-family: sans-serif;
     font-size: 5em;
   }
-}
-
-div.row.main {
-  height : 100%;
-  border-bottom-right-radius : 1em;
-  border-bottom-left-radius : 1em;
 }
 
 .row {
@@ -50,6 +44,7 @@ div.row.main {
     word-wrap : break-word;
   }
 }
+
 // Landing Page
 #landingPageCaption {
   padding-top: 5%;
@@ -58,7 +53,16 @@ div.row.main {
   padding-bottom: 5%;
 }
 
-// Main Dashboard Views
+// ------------- Main Dashboard Views
+// Left Panel
+#left-panel {
+  background-color: #607D8B;
+}
+
+// Right Panel
+#right-panel {
+ background-color: #FFF;
+}
 
 hr {
 }
@@ -106,10 +110,10 @@ input#search[placeholder] {
 
 // Commons
 
-a {
-    color : red;
-  text-decoration : none;
-}
+// a {
+//     color : #FFF;
+//   text-decoration : none;
+// }
 
 // Navigations
 .nav-wrapper {
