@@ -1,6 +1,6 @@
 /* line 2, stdin */
 body {
-  background-color: #eee; }
+  background-color: #4CAF50; }
 
 /* line 6, stdin */
 #header {
@@ -10,62 +10,75 @@ body {
   /* line 11, stdin */
   #header h1 {
     color: white;
-    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.3); }
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    font-size: 5em; }
 
-/* line 17, stdin */
+/* line 19, stdin */
 div.row.main {
   height: 100%;
   border-bottom-right-radius: 1em;
   border-bottom-left-radius: 1em; }
 
-/* line 23, stdin */
-.row {
-  background-color: #fff; }
-  /* line 27, stdin */
-  .row h1 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    margin-bottom: 0px; }
-  /* line 34, stdin */
-  .row p {
-    word-wrap: break-word; }
+/* line 27, stdin */
+.row h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 0px; }
+  /* line 33, stdin */
+  .row h1 #headerGist {
+    padding-left: 10px;
+    background-color: #C8E6C9;
+    padding-right: 10px;
+    color: #000; }
+  /* line 40, stdin */
+  .row h1 #headerManager {
+    color: #FFF;
+    margin-left: -16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #388E3C; }
 
-/* Gradient transparent - color - transparent */
-/* line 41, stdin */
-hr {
-  margin-bottom: 1.5rem; }
+/* line 49, stdin */
+.row p {
+  word-wrap: break-word; }
 
-/* line 44, stdin */
+/* line 54, stdin */
+#landingPageCaption {
+  padding-top: 5%;
+  color: #212121;
+  background-color: #C8E6C9;
+  padding-bottom: 5%; }
+
+/* line 65, stdin */
 .style-two {
-  border: 0;
-  height: 2px;
-  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+  height: 2px; }
 
-/* line 50, stdin */
+/* line 69, stdin */
 #description-header {
   background-color: #8DC2B1;
   padding-left: 20px; }
 
-/* line 55, stdin */
+/* line 74, stdin */
 .sidebar {
   width: 80%;
   margin-right: auto;
   margin-left: auto; }
 
-/* line 61, stdin */
+/* line 80, stdin */
 #editcontainer {
   width: 60%;
   margin-right: auto;
   margin-left: auto; }
 
-/* line 68, stdin */
+/* line 87, stdin */
 #left-sidebar {
   height: 100%;
   border-right: 1px solid black;
   box-shadow: 5px 3px 3px #AAA; }
 
-/* line 74, stdin */
+/* line 93, stdin */
 input#searchBar {
   margin-bottom: 5px;
   margin-top: 5px;
@@ -75,18 +88,20 @@ input#searchBar {
   background-color: #8DC2B1;
   font-size: 1.5em; }
 
-/* line 84, stdin */
+/* line 103, stdin */
 input#search[placeholder] {
   color: black; }
 
-/* line 88, stdin */
-ul {
-  list-style-type: none; }
-  /* line 90, stdin */
-  ul li {
-    text-decoration: none; }
-
-/* line 95, stdin */
+/* line 109, stdin */
 a {
-  color: black;
+  color: red;
   text-decoration: none; }
+
+/* line 115, stdin */
+.nav-wrapper {
+  background-color: #388E3C; }
+
+/* line 119, stdin */
+footer.page-footer {
+  margin-top: -1%;
+  background-color: #388E3C; }

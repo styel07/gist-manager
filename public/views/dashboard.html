@@ -1,17 +1,8 @@
-
 <div class="container">
-  <div class="row" id="header">
-    <h1>Gist Manager</h1>
-  </div>
-
+<!-- Page Layout here -->
   <div class="row">
-    <hr class="style-two">
-  </div>
 
-  <div class="row main">
-
-    <div class="four columns" id="left-sidebar">
-
+    <div class="col s12 m4 l3">
       <div class="row sidebar">
         <input id="searchBar" type="text" placeholder="Gist Title" ng-model="searchGist" />
       </div>
@@ -27,30 +18,27 @@
           </li>
         </ul>
       </div>
-
     </div>
 
-    <div class="eight columns">
+    <div class="col s12 m8 l9">
+        <div class="row">
+          <a class="button" type="button" ng-href="/#/create">Create</a>
+          <a class="button" type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
+        </div>
 
-      <div class="row">
-        <a class="button" type="button" ng-href="/#/create">Create</a>
-        <a class="button" type="button" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
-      </div>
-
-      <div class="row">
-        <div ng-repeat="file in displayGist.files">
-          <div>
-            <label for="">Description: {{ displayGist.description }}</label>
-          </div>
-          <div>
-            <label for="">File Name: {{ file.filename }}</label>
-          </div>
-          <div>
-            <p>File Content: {{ file.content }}</p>
+        <div class="row">
+          <div ng-repeat="file in displayGist.files">
+            <div>
+              <label for="">Description: {{ displayGist.description }}</label>
+            </div>
+            <div>
+              <label for="">File Name: {{ file.filename }}</label>
+            </div>
+            <div>
+              <p>File Content: {{ file.content }}</p>
+            </div>
           </div>
         </div>
-      </div>
-
     </div>
 
   </div>
