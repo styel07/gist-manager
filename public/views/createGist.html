@@ -1,29 +1,29 @@
 <div class="container">
-  <div class="row" id="header">
-    <h1>Create Gist</h1>
-  </div>
   <div class="row">
-    <hr class="style-two">
-  </div>
-  <div class="row">
-    <div id="editcontainer">
-      <fieldset>
-        <div>
+    <div class = row id="editcontainer">
+      <form class="col s12">
+
+        <div class="row input-field">
           <label for="new_gist_file">File Name</label>
           <input id="new_gist_file" type="text" ng-model="new_gist.filename">
         </div>
-           <div>
+
+        <div class ="row input-field">
           <label for="new_gist_description">Description</label>
           <input id="new_gist_decription" type="text" ng-model="new_gist.description">
         </div>
-        <div>
-          <label for="new_gist_content">Content</label>
-          <input id="new_gist_content" type="text" ng-model="new_gist.fileContent" class="u-full-width">
+
+        <div class ="row input-field">
+          <i class="material-icons prefix">mode_edit</i><h5>Description</h5>
+          <textarea id="textarea1" class="materialize-textarea" ng-model="new_gist.fileContent" class="u-full-width"></textarea>
+
         </div>
-        <div>
+
+        <div class ="row center-align">
           <button type="button" ng-click="GistService.postGists(cookies, new_gist); process_done();">Create Gist</button>
         </div>
-      </fieldset>
+
+      </form>
     </div>
   </div>
 </div>

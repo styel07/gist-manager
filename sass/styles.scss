@@ -56,64 +56,89 @@ body {
 // ------------- Main Dashboard Views
 // Left Panel
 #left-panel {
-  background-color: #607D8B;
+  background-color: #4CAF50;
 }
 
-// Right Panel
-#right-panel {
- background-color: #FFF;
+// ------------- Search Bar
+#search:placeholder{
+  color: #000;
 }
 
-hr {
-}
-.style-two {
-  height : 2px;
+input::placeholder {
+  color: #000;
 }
 
-#description-header {
-  background-color : #8DC2B1;
-  padding-left : 20px;
-}
-
-.sidebar{
-  width : 80%;
-  margin-right : auto;
-  margin-left : auto;
-}
-
-#editcontainer {
-  width : 60%;
-  margin-right : auto;
-  margin-left : auto;
-}
-
-
-#left-sidebar {
-  height : 100%;
-  border-right : 1px solid black;
-  box-shadow : 5px 3px 3px #AAA;
+li#search.collection-item {
+  background-color: #C8E6C9;
 }
 
 input#searchBar{
-  margin-bottom : 5px;
-  margin-top : 5px;
-  width : 100%;
-  border : 1px solid #309C92;
-  color : black;
-  background-color : #8DC2B1;
-  font-size: 1.5em;
+  color : #212121;
+  font-size: 1.6em;
 }
 
 input#search[placeholder] {
   color:black;
 }
 
-// Commons
+// ------------- Collections
 
-// a {
-//     color : #FFF;
-//   text-decoration : none;
-// }
+.collection {
+  border: none;
+}
+
+li.collection-item.ng-binding.ng-scope {
+  color: #000;
+  background-color: #FFF;
+}
+
+li.collection-item.ng-binding.ng-scope {
+  &:hover {
+    background-color: #C8E6C9;
+  }
+}
+// Right Panel
+#right-panel {
+  background-color: #FFF;
+}
+
+// Create & Delete Buttons
+.crudButtons {
+  background-color: #388E3C;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.btn {
+  &.create {
+    width: 100%;
+  }
+
+  &.edit {
+    width: 100%;
+  }
+}
+
+p {
+  margin-left: 7%;
+  margin-right: 7%;
+
+}
+
+#gistFileName {
+  color: #388E3C;
+}
+
+#gistFileContent {
+}
+
+// -------------- Edit gist
+
+#editGistTitle {
+  color:#C8E6C9;
+}
+
+// Commons
 
 // Navigations
 .nav-wrapper {
@@ -121,6 +146,7 @@ input#search[placeholder] {
 }
 
 footer.page-footer {
-  margin-top: -1%;
+  padding-top:0px;
   background-color: #388E3C;
+  font-size: 0.8em;
 }

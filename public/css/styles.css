@@ -47,58 +47,79 @@ body {
 
 /* line 58, stdin */
 #left-panel {
-  background-color: #607D8B; }
+  background-color: #4CAF50; }
 
 /* line 63, stdin */
-#right-panel {
-  background-color: #FFF; }
+#search:placeholder {
+  color: #000; }
 
-/* line 69, stdin */
-.style-two {
-  height: 2px; }
+/* line 67, stdin */
+input::placeholder {
+  color: #000; }
 
-/* line 73, stdin */
-#description-header {
-  background-color: #8DC2B1;
-  padding-left: 20px; }
+/* line 71, stdin */
+li#search.collection-item {
+  background-color: #C8E6C9; }
 
-/* line 78, stdin */
-.sidebar {
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto; }
-
-/* line 84, stdin */
-#editcontainer {
-  width: 60%;
-  margin-right: auto;
-  margin-left: auto; }
-
-/* line 91, stdin */
-#left-sidebar {
-  height: 100%;
-  border-right: 1px solid black;
-  box-shadow: 5px 3px 3px #AAA; }
-
-/* line 97, stdin */
+/* line 75, stdin */
 input#searchBar {
-  margin-bottom: 5px;
-  margin-top: 5px;
-  width: 100%;
-  border: 1px solid #309C92;
-  color: black;
-  background-color: #8DC2B1;
-  font-size: 1.5em; }
+  color: #212121;
+  font-size: 1.6em; }
 
-/* line 107, stdin */
+/* line 80, stdin */
 input#search[placeholder] {
   color: black; }
 
-/* line 119, stdin */
+/* line 86, stdin */
+.collection {
+  border: none; }
+
+/* line 90, stdin */
+li.collection-item.ng-binding.ng-scope {
+  color: #000;
+  background-color: #FFF; }
+
+/* line 96, stdin */
+li.collection-item.ng-binding.ng-scope:hover {
+  background-color: #C8E6C9; }
+
+/* line 101, stdin */
+#right-panel {
+  background-color: #FFF; }
+
+/* line 106, stdin */
+.crudButtons {
+  background-color: #388E3C;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+/* line 113, stdin */
+.btn.create {
+  width: 100%; }
+
+/* line 117, stdin */
+.btn.edit {
+  width: 100%; }
+
+/* line 122, stdin */
+p {
+  margin-left: 7%;
+  margin-right: 7%; }
+
+/* line 128, stdin */
+#gistFileName {
+  color: #388E3C; }
+
+/* line 137, stdin */
+#editGistTitle {
+  color: #C8E6C9; }
+
+/* line 144, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
-/* line 123, stdin */
+/* line 148, stdin */
 footer.page-footer {
-  margin-top: -1%;
-  background-color: #388E3C; }
+  padding-top: 0px;
+  background-color: #388E3C;
+  font-size: 0.8em; }
