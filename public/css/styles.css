@@ -112,13 +112,26 @@ p {
 
 /* line 137, stdin */
 #editGistTitle {
+  color: #FFF;
+  margin-bottom: 0px;
+  margin-top: -10px; }
+
+/* line 142, stdin */
+#editGistFileName {
+  margin-top: 0px;
   color: #C8E6C9; }
 
-/* line 144, stdin */
+/* line 146, stdin */
+#editGistContent {
+  background-color: #FFF;
+  padding-left: 4%;
+  padding-right: 4%; }
+
+/* line 154, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
-/* line 148, stdin */
+/* line 158, stdin */
 footer.page-footer {
   padding-top: 0px;
   background-color: #388E3C;

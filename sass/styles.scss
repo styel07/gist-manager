@@ -135,9 +135,19 @@ p {
 // -------------- Edit gist
 
 #editGistTitle {
-  color:#C8E6C9;
+  color:#FFF;
+  margin-bottom: 0px;
+  margin-top: -10px;
 }
-
+#editGistFileName {
+  margin-top: 0px;
+  color: #C8E6C9;
+}
+#editGistContent {
+  background-color: #FFF;
+  padding-left: 4%;
+  padding-right: 4%;
+}
 // Commons
 
 // Navigations
