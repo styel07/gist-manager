@@ -10,10 +10,13 @@ We created Gist Manager as a intuitive way to create, manage and organize your g
   * Login with your Github account
 
 ##Stack
+Fontend:
+  * Angular
+  * Materialize
 
-Fontend: Angular
-
-Backend: Express/NodeJS, OAuth
+Backend:
+  * Express/NodeJS
+  * OAuth
 
 ##Configurations
 Step 1:
@@ -35,15 +38,16 @@ run gulp
 
 
 ##Steps to contribute
-Fork this repository
-run
+1. Fork this repository
+
+2. run
 ```javascript
 git clone https://github.com/YOUR-USERNAME/gist-manager.git
 ```
-run
+3. run
 ```javascript
 npm install
 ```
 
 
-One or two snap shots of final UI/UX
+##Snap shots
