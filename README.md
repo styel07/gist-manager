@@ -19,14 +19,8 @@ Backend:
   * OAuth
 
 ##Configurations
-Step 1:
-```javascript
-run npm install
-```
-Step 2:
-```javascript
-run gulp
-```
+1. run ```javascript npm install```
+2. run  ```javascript run gulp```
 
 ##How to Use
 1. Enter your Github credentials in the landing page
@@ -40,14 +34,8 @@ run gulp
 ##Steps to contribute
 1. Fork this repository
 
-2. run
-```javascript
-git clone https://github.com/YOUR-USERNAME/gist-manager.git
-```
-3. run
-```javascript
-npm install
-```
+2. run ```javascript git clone https://github.com/YOUR-USERNAME/gist-manager.git```
+3. run ```javascript npm install```
 
 
 ##Snap shots
