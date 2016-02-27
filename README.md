@@ -36,11 +36,14 @@ run gulp
 
 ##Steps to contribute
 Fork this repository
-run ```javascript
+run
+```javascript
 git clone https://github.com/YOUR-USERNAME/gist-manager.git
 ```
-run ```javascript
-npm install```
+run
+```javascript
+npm install
+```
 
 
 One or two snap shots of final UI/UX
