@@ -10,7 +10,7 @@ Angular, Express and Skeleton.
 
 Login with your Github credentials and view a dashboard to create, delete and edit your gists!
 
-'''javascript
+```javascript
 Better readme
 List what it does in a simple one liner 5-10 words
 Why did you create this
@@ -20,4 +20,4 @@ What it is built on
 Steps to contribute
     fork repo, clone, npm install,
 One or two snap shots of final UI/UX
-'''
+```
