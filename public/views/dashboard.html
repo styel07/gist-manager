@@ -1,6 +1,5 @@
 <div class="container">
-  <div class="row">
-
+  <div class="row" id="collection-article">
     <div class="col s12 m4 l3" id="left-panel">
 
       <ul class="collection">
@@ -8,7 +7,6 @@
           <li class="collection-item" id="search">
             <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
           </li>
-
 
         <a href="#">
           <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
@@ -24,24 +22,23 @@
     </div>
 
     <div class="col s12 m8 l9" id="right-panel">
-        <div class="row">
+        <div class="row right-align">
             <span class="col s6">
               <a class="waves-effect waves-light btn create" ng-href="/#/create">
-              Create
+                Create
               </a>
             </span>
-
-            <span class="col s6">
+            <span class="col s6 left-alight">
               <a class="waves-effect waves-light btn edit" ng-href="/#/edit/{{ displayGist.id }}">
                 Edit
               </a>
             </span>
         </div>
 
-        <div class="row">
+        <div class="row view-gist-info">
           <div ng-repeat="file in displayGist.files">
-            <div class="row center-align">
-              <h4>{{ displayGist.description }}</h4>
+            <div class="row">
+              <h4 id="gistTitle">{{ displayGist.description }}</h4>
             </div>
             <div class="row">
               <p id="gistFileName">File Name: {{ file.filename }}</p>

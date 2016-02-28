@@ -54,11 +54,23 @@ body {
 }
 
 // ------------- Main Dashboard Views
-// Left Panel
-#left-panel {
-  background-color: #4CAF50;
+#collection-article {
+  margin-bottom: 0px;
+  background-color: #FFF;
+  height: inherit;
 }
 
+#left-panel {
+  padding: 0px;
+
+  ul.collection {
+    margin: 0px;
+  }
+}
+
+#right-panel {
+  border-left: 2px dashed #B6B6B6;
+}
 // ------------- Search Bar
 #search:placeholder{
   color: #000;
@@ -68,13 +80,11 @@ input::placeholder {
   color: #000;
 }
 
-li#search.collection-item {
-  background-color: #C8E6C9;
-}
-
 input#searchBar{
   color : #212121;
   font-size: 1.6em;
+  border:none;
+  margin-bottom: 0px;
 }
 
 input#search[placeholder] {
@@ -83,13 +93,11 @@ input#search[placeholder] {
 
 // ------------- Collections
 
-.collection {
-  border: none;
-}
-
 li.collection-item.ng-binding.ng-scope {
   color: #000;
-  background-color: #FFF;
+  border-top: 1px dashed #B6B6B6;
+  border-bottom: 1px dashed #B6B6B6;
+
 }
 
 li.collection-item.ng-binding.ng-scope {
@@ -105,31 +113,37 @@ li.collection-item.ng-binding.ng-scope {
 // Create & Delete Buttons
 .crudButtons {
   background-color: #388E3C;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .btn {
-  &.create {
-    width: 100%;
-  }
-
-  &.edit {
-    width: 100%;
+  &.create, &.edit {
+    width: 75%;
+    margin-top: -20px;
+    font-size: 1.6em;
   }
 }
 
-p {
-  margin-left: 7%;
-  margin-right: 7%;
 
+div.view-gist-info {
+    padding-left: 7%;
+    padding-right: 7%;
+
+  #gistFileName {
+    margin-top: 0px;
+    color: #388E3C;
+    margin-top: 0px;
+  }
+
+  #gistFileContent {
+    margin-top: 0px;
+  }
 }
 
-#gistFileName {
-  color: #388E3C;
-}
-
-#gistFileContent {
+h4#gistTitle{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 // -------------- Edit gist
@@ -156,6 +170,7 @@ p {
 }
 
 footer.page-footer {
+  margin-top: 0px;
   padding-top:0px;
   background-color: #388E3C;
   font-size: 0.8em;
