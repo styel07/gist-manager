@@ -111,16 +111,24 @@ li.collection-item.ng-binding.ng-scope {
 }
 
 // Create & Delete Buttons
+#btn-container-article {
+  margin-top: 12px;
+}
+
 .crudButtons {
   background-color: #388E3C;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.btn-create-edit {
+height:40px;
 }
 
 .btn {
   &.create, &.edit {
-    width: 75%;
-    margin-top: -20px;
+    height: 100%;
+    width: 100%;
     font-size: 1.6em;
   }
 }
