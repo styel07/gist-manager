@@ -32,12 +32,12 @@ app.use(express.static(__dirname + '/public'));
 app.use('/auth', auth);
 app.use('/gists', gists);
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// app.get('/', (req, res) => {
+//   res.render('inde');
+// });
 
 app.get('/*', function(req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname   + '/public/index.html');
 });
 
 app.listen(PORT, () => {
