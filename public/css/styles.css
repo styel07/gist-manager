@@ -14,124 +14,147 @@ body {
     font-family: sans-serif;
     font-size: 5em; }
 
-/* line 21, stdin */
-.row h1 {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 15px;
-  margin-bottom: 0px; }
-  /* line 27, stdin */
-  .row h1 #headerGist {
-    padding-left: 10px;
-    background-color: #C8E6C9;
-    padding-right: 10px;
-    color: #000; }
-  /* line 34, stdin */
-  .row h1 #headerManager {
-    color: #FFF;
-    margin-left: -16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #388E3C; }
+/* line 23, stdin */
+.row h1 #headerGist {
+  padding-left: 10px;
+  background-color: #C8E6C9;
+  padding-right: 10px;
+  color: #000;
+  font-size: 36px; }
 
-/* line 43, stdin */
+/* line 31, stdin */
+.row h1 #headerManager {
+  color: #FFF;
+  margin-left: -16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #388E3C; }
+
+/* line 40, stdin */
 .row p {
   word-wrap: break-word; }
 
-/* line 49, stdin */
-#landingPageCaption {
-  padding-top: 5%;
-  color: #212121;
-  background-color: #C8E6C9;
-  padding-bottom: 5%; }
+/* line 46, stdin */
+#landing {
+  padding: 20% 10%;
+  color: #FFF; }
 
-/* line 58, stdin */
+/* line 51, stdin */
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  background-color: #4CAF50;
+  background: url("/images/background.jpeg") no-repeat center center scroll;
+  background-size: cover;
+  -o-background-size: cover; }
+
+/* line 63, stdin */
 #left-panel {
   background-color: #4CAF50; }
 
-/* line 63, stdin */
+/* line 68, stdin */
 #search:placeholder {
   color: #000; }
 
-/* line 67, stdin */
+/* line 72, stdin */
 input::placeholder {
   color: #000; }
 
-/* line 71, stdin */
+/* line 76, stdin */
 li#search.collection-item {
   background-color: #C8E6C9; }
 
-/* line 75, stdin */
+/* line 80, stdin */
 input#searchBar {
   color: #212121;
   font-size: 1.6em; }
 
-/* line 80, stdin */
+/* line 85, stdin */
 input#search[placeholder] {
   color: black; }
 
-/* line 86, stdin */
+/* line 91, stdin */
 .collection {
   border: none; }
 
-/* line 90, stdin */
+/* line 95, stdin */
 li.collection-item.ng-binding.ng-scope {
   color: #000;
   background-color: #FFF; }
 
-/* line 96, stdin */
+/* line 101, stdin */
 li.collection-item.ng-binding.ng-scope:hover {
   background-color: #C8E6C9; }
 
-/* line 101, stdin */
+/* line 106, stdin */
 #right-panel {
   background-color: #FFF; }
 
-/* line 106, stdin */
+/* line 111, stdin */
 .crudButtons {
   background-color: #388E3C;
   padding-top: 5%;
   padding-bottom: 5%; }
 
-/* line 113, stdin */
+/* line 118, stdin */
 .btn.create {
   width: 100%; }
 
-/* line 117, stdin */
+/* line 122, stdin */
 .btn.edit {
   width: 100%; }
 
-/* line 122, stdin */
+/* line 127, stdin */
 p {
   margin-left: 7%;
   margin-right: 7%; }
 
-/* line 128, stdin */
+/* line 133, stdin */
 #gistFileName {
   color: #388E3C; }
 
-/* line 137, stdin */
+/* line 142, stdin */
 #editGistTitle {
   color: #FFF;
   margin-bottom: 0px;
   margin-top: -10px; }
 
-/* line 142, stdin */
+/* line 147, stdin */
 #editGistFileName {
   margin-top: 0px;
   color: #C8E6C9; }
 
-/* line 146, stdin */
+/* line 151, stdin */
 #editGistContent {
   background-color: #FFF;
   padding-left: 4%;
   padding-right: 4%; }
 
-/* line 154, stdin */
+/* line 156, stdin */
+.tagline {
+  color: #FFF;
+  font-size: 20px;
+  padding: 10px 0; }
+
+/* line 161, stdin */
+.btn {
+  background-color: #727272; }
+
+/* line 164, stdin */
+.logoname {
+  padding-left: 20px; }
+
+/* line 170, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
-/* line 158, stdin */
+@media screen and (max-width: 480px) {
+  /* line 174, stdin */
+  .tagline {
+    font-size: 14px; } }
+
+/* line 178, stdin */
 footer.page-footer {
   padding-top: 0px;
   background-color: #388E3C;
