@@ -1,3 +1,15 @@
+<script>
+$('body').ready(function() {
+  $(".progress").hide();
+},3000);
+
+</script>
+
+<div class="progress">
+  <div class="indeterminate"></div>
+</div>
+
+
 <div class="container">
   <div class="row" id="collection-article">
     <div class="col s12 m4 l3" id="left-panel">
@@ -37,15 +49,9 @@
 
         <div class="row view-gist-info">
           <div ng-repeat="file in displayGist.files">
-            <div class="row">
               <h4 id="gistTitle">{{ displayGist.description }}</h4>
-            </div>
-            <div class="row">
               <p id="gistFileName">File Name: {{ file.filename }}</p>
-            </div>
-            <div class = "row">
               <p id="gistFileContent">{{ file.content }}</p>
-            </div>
           </div>
         </div>
     </div>

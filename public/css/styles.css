@@ -85,100 +85,107 @@ input#searchBar {
 input#search[placeholder] {
   color: black; }
 
-/* line 101, stdin */
+/* line 100, stdin */
+.collection {
+  border: none; }
+
+/* line 104, stdin */
 li.collection-item.ng-binding.ng-scope {
   color: #000;
   border-top: 1px dashed #B6B6B6;
   border-bottom: 1px dashed #B6B6B6; }
 
-/* line 109, stdin */
+/* line 112, stdin */
 li.collection-item.ng-binding.ng-scope:hover {
   background-color: #C8E6C9; }
 
-/* line 114, stdin */
+/* line 117, stdin */
 #right-panel {
   background-color: #FFF; }
 
-/* line 119, stdin */
+/* line 122, stdin */
 #btn-container-article {
   margin-top: 12px; }
 
-/* line 123, stdin */
+/* line 126, stdin */
 .crudButtons {
   background-color: #388E3C;
   padding-top: 9px;
   padding-bottom: 9px; }
 
-/* line 129, stdin */
+/* line 132, stdin */
 .btn-create-edit {
   height: 40px; }
 
-/* line 134, stdin */
+/* line 137, stdin */
 .btn.create, .btn.edit {
   height: 100%;
   width: 100%;
-  font-size: 1.6em;
-  background-color: #727272; }
+  font-size: 1.6em; }
 
-/* line 143, stdin */
+/* line 145, stdin */
 div.view-gist-info {
   padding-left: 7%;
   padding-right: 7%; }
-  /* line 147, stdin */
+  /* line 149, stdin */
   div.view-gist-info #gistFileName {
     margin-top: 0px;
     color: #388E3C;
     margin-top: 0px; }
-  /* line 153, stdin */
+  /* line 155, stdin */
   div.view-gist-info #gistFileContent {
     margin-top: 0px; }
 
-/* line 158, stdin */
+/* line 160, stdin */
 h4#gistTitle {
   margin-top: 0px;
-  margin-bottom: 0px; }
+  margin-bottom: 10px; }
 
 /* line 165, stdin */
+p#gistFileName {
+  margin-bottom: 0px; }
+
+/* line 171, stdin */
 #editGistTitle {
   color: #FFF;
   margin-bottom: 0px;
   margin-top: -10px; }
 
-/* line 170, stdin */
+/* line 176, stdin */
 #editGistFileName {
   margin-top: 0px;
   color: #C8E6C9; }
 
-/* line 174, stdin */
+/* line 180, stdin */
 #editGistContent {
   background-color: #FFF;
   padding-left: 4%;
   padding-right: 4%; }
 
-/* line 179, stdin */
+/* line 185, stdin */
 .tagline {
   color: #FFF;
   font-size: 20px;
   padding: 10px 0; }
 
-/* line 184, stdin */
+/* line 190, stdin */
 .btn {
   background-color: #727272; }
 
-/* line 187, stdin */
+/* line 193, stdin */
 .logoname {
   padding-left: 20px; }
 
-/* line 193, stdin */
+/* line 199, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
 @media screen and (max-width: 480px) {
-  /* line 197, stdin */
+  /* line 203, stdin */
   .tagline {
     font-size: 14px; } }
 
-/* line 201, stdin */
+/* line 207, stdin */
 footer.page-footer {
   margin-top: 0px;
   padding-top: 0px;

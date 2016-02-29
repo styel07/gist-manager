@@ -97,6 +97,9 @@ input#search[placeholder] {
 }
 
 // ------------- Collections
+.collection {
+  border: none;
+}
 
 li.collection-item.ng-binding.ng-scope {
   color: #000;
@@ -135,7 +138,6 @@ height:40px;
     height: 100%;
     width: 100%;
     font-size: 1.6em;
-    background-color: #727272;
   }
 }
 
@@ -157,6 +159,10 @@ div.view-gist-info {
 
 h4#gistTitle{
   margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+p#gistFileName {
   margin-bottom: 0px;
 }
 
