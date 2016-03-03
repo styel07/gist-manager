@@ -9,8 +9,15 @@ $('body').ready(function() {
   <div class="indeterminate"></div>
 </div>
 
+<div class="center-align col s12" id="dash-header">
+  <img src="../images/logo1.png" width="10%"  alt="Gist Manager">
+  <span class="logoname">
+    <img src="../images/logoname.png"  width="43%" alt="Gist Manager">
+  </span>
+</div>
 
 <div class="container">
+
   <div class="row" id="collection-article">
     <div class="col s12 m4 l3" id="left-panel">
 
@@ -23,9 +30,7 @@ $('body').ready(function() {
         <a href="#">
           <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
             {{ gist.description }}
-            <!-- <ul class="collection">
-              <li ng-repeat="file in gist.files">{{ file.filename }}</li>
-            </ul> -->
+            <li ng-repeat="file in gist.files">{{ file.filename }}</li>
           </li>
         </a>
 

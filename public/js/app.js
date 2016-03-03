@@ -11,8 +11,8 @@ gistApp.config( ($routeProvider, $locationProvider) => {
   // routes
   $routeProvider
   .when('/', {
-    templateUrl : 'views/default.html',
-    controller : 'loginController'
+    controller : 'loginController',
+    templateUrl : 'views/default.html'
   })
   .when('/auth_token/:access_token', {
     controller : 'authController',

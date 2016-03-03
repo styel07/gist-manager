@@ -34,12 +34,16 @@ body {
 .row p {
   word-wrap: break-word; }
 
-/* line 46, stdin */
+/* line 45, stdin */
+.btn {
+  background-color: #727272; }
+
+/* line 50, stdin */
 #landing {
   padding: 20% 10%;
   color: #FFF; }
 
-/* line 51, stdin */
+/* line 55, stdin */
 .header {
   display: table;
   position: relative;
@@ -47,147 +51,205 @@ body {
   background-color: #4CAF50;
   background: url("/images/background.jpeg") no-repeat center center scroll;
   background-size: cover;
-  -o-background-size: cover; }
+  -o-background-size: cover;
+  margin-bottom: 0px; }
 
-/* line 62, stdin */
+/* line 67, stdin */
+#dash-header {
+  background-color: #388E3C;
+  z-index: 1; }
+
+/* line 75, stdin */
+.tagline {
+  color: #FFF;
+  font-size: 20px;
+  padding: 10px 0; }
+
+/* line 81, stdin */
+.logoname {
+  padding-left: 20px; }
+
+/* line 85, stdin */
 #collection-article {
   margin-bottom: 0px;
   background-color: #FFF;
   height: inherit; }
 
-/* line 68, stdin */
+/* line 91, stdin */
 #left-panel {
   padding: 0px; }
-  /* line 71, stdin */
+  /* line 94, stdin */
   #left-panel ul.collection {
     margin: 0px; }
 
-/* line 76, stdin */
+/* line 99, stdin */
 #right-panel {
   border-left: 2px dashed #B6B6B6; }
 
-/* line 80, stdin */
+/* line 103, stdin */
 #search:placeholder {
   color: #000; }
 
-/* line 84, stdin */
+/* line 107, stdin */
 input::placeholder {
   color: #000; }
 
-/* line 88, stdin */
+/* line 111, stdin */
 input#searchBar {
   color: #212121;
   font-size: 1.6em;
   border: none;
   margin-bottom: 0px; }
 
-/* line 95, stdin */
+/* line 118, stdin */
 input#search[placeholder] {
   color: black; }
 
-/* line 100, stdin */
+/* line 123, stdin */
 .collection {
   border: none; }
 
-/* line 104, stdin */
+/* line 127, stdin */
 li.collection-item.ng-binding.ng-scope {
   color: #000;
   border-top: 1px dashed #B6B6B6;
   border-bottom: 1px dashed #B6B6B6; }
 
-/* line 112, stdin */
+/* line 135, stdin */
 li.collection-item.ng-binding.ng-scope:hover {
   background-color: #C8E6C9; }
 
-/* line 117, stdin */
+/* line 140, stdin */
 #right-panel {
   background-color: #FFF; }
 
-/* line 122, stdin */
+/* line 145, stdin */
 #btn-container-article {
   margin-top: 12px; }
 
-/* line 126, stdin */
+/* line 149, stdin */
 .crudButtons {
   background-color: #388E3C;
   padding-top: 9px;
   padding-bottom: 9px; }
 
-/* line 132, stdin */
+/* line 155, stdin */
 .btn-create-edit {
   height: 40px; }
 
-/* line 137, stdin */
+/* line 160, stdin */
 .btn.create, .btn.edit {
   height: 100%;
   width: 100%;
   font-size: 1.6em; }
 
-/* line 145, stdin */
+/* line 165, stdin */
+.btn:hover {
+  background-color: #4CAF50; }
+
+/* line 170, stdin */
+.btn#create-gist {
+  width: 30%; }
+
+/* line 177, stdin */
 div.view-gist-info {
   padding-left: 7%;
   padding-right: 7%; }
-  /* line 149, stdin */
+  /* line 181, stdin */
   div.view-gist-info #gistFileName {
     margin-top: 0px;
     color: #388E3C;
     margin-top: 0px; }
-  /* line 155, stdin */
+  /* line 187, stdin */
   div.view-gist-info #gistFileContent {
     margin-top: 0px; }
 
-/* line 160, stdin */
+/* line 192, stdin */
 h4#gistTitle {
   margin-top: 0px;
   margin-bottom: 10px; }
 
-/* line 165, stdin */
+/* line 197, stdin */
 p#gistFileName {
   margin-bottom: 0px; }
 
-/* line 171, stdin */
+/* line 203, stdin */
 #editGistTitle {
   color: #FFF;
   margin-bottom: 0px;
   margin-top: -10px; }
 
-/* line 176, stdin */
+/* line 208, stdin */
 #editGistFileName {
   margin-top: 0px;
   color: #C8E6C9; }
 
-/* line 180, stdin */
+/* line 212, stdin */
 #editGistContent {
   background-color: #FFF;
   padding-left: 4%;
   padding-right: 4%; }
 
-/* line 185, stdin */
-.tagline {
-  color: #FFF;
-  font-size: 20px;
-  padding: 10px 0; }
-
-/* line 190, stdin */
-.btn {
-  background-color: #727272; }
-
-/* line 193, stdin */
-.logoname {
-  padding-left: 20px; }
-
-/* line 199, stdin */
+/* line 220, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
 @media screen and (max-width: 480px) {
-  /* line 203, stdin */
+  /* line 224, stdin */
   .tagline {
     font-size: 14px; } }
 
-/* line 207, stdin */
+/* line 228, stdin */
 footer.page-footer {
   margin-top: 0px;
   padding-top: 0px;
   background-color: #388E3C;
   font-size: 0.8em; }
+
+/* line 237, stdin */
+#createContainer.row {
+  background-color: #FFF;
+  margin-bottom: 0px; }
+
+/* line 242, stdin */
+#btn-create-gist {
+  width: 30%; }
+
+/* line 246, stdin */
+textarea.materialize-textarea {
+  height: 50%;
+  min-height: 20rem; }
+
+/* line 251, stdin */
+.input-field {
+  padding-left: 5%;
+  padding-right: 5%; }
+  /* line 255, stdin */
+  .input-field label {
+    padding-left: 2.5%;
+    color: #388E3C; }
+    /* line 259, stdin */
+    .input-field label.active {
+      transform: translateY(0%); }
+
+/* line 265, stdin */
+h3.input-field {
+  padding-left: 8%;
+  padding-top: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+/* line 272, stdin */
+#new_gist_description, #textarea-create-edit {
+  font-size: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 25px; }
+
+/* line 279, stdin */
+#create-gist-title {
+  float: left; }
+
+/* line 283, stdin */
+#create-gist-title-btn {
+  float: left; }

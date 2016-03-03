@@ -1,23 +1,40 @@
-<div class="container">
-  <div class="row">
-    <h3>Edit Gist</h3>
-    <h2 id="editGistTitle">{{edit_gist.description}}</h2>
-    <h6 id="editGistFileName">{{edit_gist.filename}}</h6>
-  </div>
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="editGistContent" class="materialize-textarea" ng-model="edit_gist.fileContent" class="u-full-width"></textarea>
-        </div>
-      </div>
-    </form>
-  <div class="row">
-    <a class="waves-effect waves-light btn save" ng-click="GistService.editGist(cookies, edit_gist, gist_id); process_done()">
-      Save
-    </a>
+<div class="center-align col s12" id="dash-header">
+  <img src="../images/logo1.png" width="10%"  alt="Gist Manager">
+  <span class="logoname">
+    <img src="../images/logoname.png"  width="43%" alt="Gist Manager">
+  </span>
+</div>
 
-    <a class="waves-effect waves-light btn delete" ng-click="GistService.deleteGist(cookies, gist_id); process_done()">
-      Delete
-    </a>
-  </div>
+<div class="container">
+  <form class="col s12">
+    <div class ="row" id="createContainer">
+
+      <div class ="row">
+        <span id="create-gist-title">
+          <h3 class="input-field" value="">Edit {{edit_gist.description}}</h3>
+          <h6 id="editGistFileName"></h6>
+        </span>
+        <span id="create-gist-title-btn">
+          <a ng-href="/#/dashboard" class="btn back-btn">Back to Gists</a>
+        </span>
+      </div>
+
+      <div class="row input-field" id="new_gist_description">
+        <input type="text" ng-model="new_gist.description" value="{{edit_gist.filename}}" class="validate">
+        <label class="active" for="new_gist_file">File Name</label>
+
+      </div>
+
+      <div class ="row input-field" id="textarea-create-edit">
+        <label for="new_gist_description">Description</label>
+        <textarea  class="materialize-textarea" ng-model="edit_gist.fileContent" ></textarea>
+      </div>
+
+      <div class ="row center-align">
+        <a class="waves-effect waves-light btn save" ng-click="GistService.editGist(cookies, edit_gist, gist_id); process_done()">Save</a>
+        <a class="waves-effect waves-light btn delete" ng-click="GistService.deleteGist(cookies, gist_id); process_done()">Delete</a>
+      </div>
+
+    </div>
+  </form>
 </div>

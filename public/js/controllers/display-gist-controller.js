@@ -21,6 +21,12 @@ angular.module('gistApp')
             // gets a single gist in the array
             GistService.singleGist(userCookie, gists[0].id)
             .success( (gist) => {
+
+              for (key in gist.files) {
+                console.log('aksjdakshdkahsd23', key);
+              }
+
+              console.log('this', gist);
               $scope.displayGist = gist;
             });
 

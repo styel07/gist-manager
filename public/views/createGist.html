@@ -1,29 +1,40 @@
+<div class="center-align col s12" id="dash-header">
+  <img src="../images/logo1.png" width="10%"  alt="Gist Manager">
+  <span class="logoname">
+    <img src="../images/logoname.png"  width="43%" alt="Gist Manager">
+  </span>
+</div>
+
 <div class="container">
-  <div class="row">
-    <div class = row id="editcontainer">
-      <form class="col s12">
+  <form class="col s12">
+    <div class ="row" id="createContainer">
 
-        <div class="row input-field">
-          <label for="new_gist_file">File Name</label>
-          <input id="new_gist_file" type="text" ng-model="new_gist.filename">
-        </div>
+      <div class ="row">
+        <span id="create-gist-title">
+          <h3 class="input-field">Create New Gist</h3>
+        </span>
+        <span id="create-gist-title-btn">
+          <a ng-href="/#/dashboard" class="btn back-btn">Back to Gists</a>
+        </span>
+      </div>
 
-        <div class ="row input-field">
-          <label for="new_gist_description">Description</label>
-          <input id="new_gist_decription" type="text" ng-model="new_gist.description">
-        </div>
+      <div class="row input-field" id="new_gist_description">
+        <label for="new_gist_file">File Name</label>
+        <input  type="text" ng-model="new_gist.description">
+        <!-- <input id="new_gist_file" type="text" ng-model="new_gist.filename"> -->
+      </div>
 
-        <div class ="row input-field">
-          <i class="material-icons prefix">mode_edit</i><h5>Description</h5>
-          <textarea id="textarea1" class="materialize-textarea" ng-model="new_gist.fileContent" class="u-full-width"></textarea>
+      <div class ="row input-field" id="textarea-create-edit">
+        <label for="new_gist_description">Description</label>
+        <textarea  class="materialize-textarea" ng-model="new_gist.fileContent"></textarea>
+      </div>
 
-        </div>
+      <!--         <i class="material-icons prefix">mode_edit</i> -->
 
-        <div class ="row center-align">
-          <button type="button" ng-click="GistService.postGists(cookies, new_gist); process_done();">Create Gist</button>
-        </div>
+      <div class ="row center-align">
+        <a class="waves-effect waves-light btn create" ng-href="/#/create" ng-click="GistService.postGists(cookies, new_gist); process_done();" id="btn-create-gist">Create Gist</a>
+      </div>
 
-      </form>
     </div>
-  </div>
+  </form>
 </div>
