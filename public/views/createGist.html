@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  document.getElementById
+</script>
+
 <div class="center-align col s12" id="dash-header">
   <img src="../images/logo1.png" width="10%"  alt="Gist Manager">
   <span class="logoname">
@@ -10,16 +14,11 @@
     <div class ="row" id="createContainer">
 
       <div class ="row">
-        <span id="create-gist-title">
           <h3 class="input-field">Create New Gist</h3>
-        </span>
-        <span id="create-gist-title-btn">
-          <a ng-href="/#/dashboard" class="btn back-btn">Back to Gists</a>
-        </span>
       </div>
 
       <div class="row input-field" id="new_gist_description">
-        <label for="new_gist_file">File Name</label>
+        <label for="new_gist_file">Gist Name</label>
         <input  type="text" ng-model="new_gist.description">
         <!-- <input id="new_gist_file" type="text" ng-model="new_gist.filename"> -->
       </div>
@@ -32,6 +31,7 @@
       <!--         <i class="material-icons prefix">mode_edit</i> -->
 
       <div class ="row center-align">
+        <a ng-href="/#/dashboard" class="btn back-btn" onclick="checkValid()">Back</a>
         <a class="waves-effect waves-light btn create" ng-href="/#/create" ng-click="GistService.postGists(cookies, new_gist); process_done();" id="btn-create-gist">Create Gist</a>
       </div>
 

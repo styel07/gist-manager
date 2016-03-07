@@ -138,118 +138,109 @@ li.collection-item.ng-binding.ng-scope:hover {
   height: 40px; }
 
 /* line 160, stdin */
-.btn.create, .btn.edit {
-  height: 100%;
-  width: 100%;
+.btn.create, .btn.edit, .btn.back-btn, .btn.delete, .btn.save {
   font-size: 1.6em; }
 
-/* line 165, stdin */
+/* line 163, stdin */
 .btn:hover {
   background-color: #4CAF50; }
 
-/* line 170, stdin */
-.btn#create-gist {
-  width: 30%; }
+/* line 168, stdin */
+.btn.create, .btn.edit {
+  width: 100%;
+  height: 100%; }
 
-/* line 177, stdin */
+/* line 178, stdin */
 div.view-gist-info {
   padding-left: 7%;
   padding-right: 7%; }
-  /* line 181, stdin */
+  /* line 182, stdin */
   div.view-gist-info #gistFileName {
     margin-top: 0px;
     color: #388E3C;
     margin-top: 0px; }
-  /* line 187, stdin */
+  /* line 188, stdin */
   div.view-gist-info #gistFileContent {
     margin-top: 0px; }
 
-/* line 192, stdin */
+/* line 193, stdin */
 h4#gistTitle {
   margin-top: 0px;
   margin-bottom: 10px; }
 
-/* line 197, stdin */
+/* line 198, stdin */
 p#gistFileName {
   margin-bottom: 0px; }
 
-/* line 203, stdin */
+/* line 204, stdin */
 #editGistTitle {
   color: #FFF;
   margin-bottom: 0px;
   margin-top: -10px; }
 
-/* line 208, stdin */
+/* line 209, stdin */
 #editGistFileName {
   margin-top: 0px;
   color: #C8E6C9; }
 
-/* line 212, stdin */
+/* line 213, stdin */
 #editGistContent {
   background-color: #FFF;
   padding-left: 4%;
   padding-right: 4%; }
 
-/* line 220, stdin */
+/* line 221, stdin */
 .nav-wrapper {
   background-color: #388E3C; }
 
 @media screen and (max-width: 480px) {
-  /* line 224, stdin */
+  /* line 225, stdin */
   .tagline {
     font-size: 14px; } }
 
-/* line 228, stdin */
+/* line 229, stdin */
 footer.page-footer {
   margin-top: 0px;
   padding-top: 0px;
   background-color: #388E3C;
   font-size: 0.8em; }
 
-/* line 237, stdin */
+/* line 238, stdin */
 #createContainer.row {
   background-color: #FFF;
   margin-bottom: 0px; }
 
-/* line 242, stdin */
+/* line 243, stdin */
 #btn-create-gist {
   width: 30%; }
 
-/* line 246, stdin */
+/* line 257, stdin */
 textarea.materialize-textarea {
   height: 50%;
   min-height: 20rem; }
 
-/* line 251, stdin */
+/* line 262, stdin */
 .input-field {
   padding-left: 5%;
   padding-right: 5%; }
-  /* line 255, stdin */
+  /* line 266, stdin */
   .input-field label {
-    padding-left: 2.5%;
+    padding-left: 4%;
     color: #388E3C; }
-    /* line 259, stdin */
+    /* line 270, stdin */
     .input-field label.active {
       transform: translateY(0%); }
 
-/* line 265, stdin */
+/* line 276, stdin */
 h3.input-field {
-  padding-left: 8%;
+  padding-left: 5%;
   padding-top: 30px;
   margin-top: 0px;
   margin-bottom: 0px; }
 
-/* line 272, stdin */
+/* line 283, stdin */
 #new_gist_description, #textarea-create-edit {
   font-size: 1.4em;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 25px; }
-
-/* line 279, stdin */
-#create-gist-title {
-  float: left; }
-
-/* line 283, stdin */
-#create-gist-title-btn {
-  float: left; }
