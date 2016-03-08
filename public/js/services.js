@@ -1,6 +1,6 @@
 'use strict';
 angular.module('gistApp')
-  .service('OAuthService', ['$http', '$cookies', function($http, $cookies){
+  .service('OAuthService', ['$http', '$cookies', function($http, $cookies) {
     var self = this;
 
     // this endpoint points from express to angular
@@ -11,7 +11,7 @@ angular.module('gistApp')
     };
 
   }])
-  .service('GistService', ['$http', function($http){
+  .service('GistService', ['$http', function($http) {
     var self = this;
     this.endpoint = '/gists';
 
@@ -27,11 +27,10 @@ angular.module('gistApp')
 
     this.postGists = (cookie, input) => {
       var data = {
-            description : input.description,
-            public : true,
-            files : {}
-          };
-
+        description : input.description,
+        public : true,
+        files : {}
+      };
       data.files[input.filename] = { content : input.fileContent };
 
       return $http({
@@ -56,10 +55,10 @@ angular.module('gistApp')
 
     this.editGist = (cookie, input, id) => {
       var data = {
-            description : input.description,
-            public : true,
-            files : {}
-          };
+        description : input.description,
+        public : true,
+        files : {}
+      };
 
       data.files[input.filename] = { content : input.fileContent };
 

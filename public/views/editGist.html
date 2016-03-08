@@ -10,19 +10,19 @@
     <div class ="row" id="createContainer">
 
       <div class ="row">
-          <h3 class="input-field" value="">Edit {{edit_gist.description}}</h3>
-          <h6 id="editGistFileName"></h6>
+          <h3 class="input-field" value="">{{edit_gist.description}}</h3>
+          <h6 class="input-field" id="editGistFileName">{{edit_gist.description}}</h6>
       </div>
 
       <div class="row input-field" id="new_gist_description">
-        <input type="text" ng-model="new_gist.description" value="{{edit_gist.filename}}" class="validate">
-        <label class="active" for="new_gist_file">File Name</label>
+        <input type="text" ng-model="edit_gist.description" value="{{edit_gist.filename}}" class="validate">
+        <label class="active" for="new_gist_file">Gist Title</label>
 
       </div>
 
       <div class ="row input-field" id="textarea-create-edit">
         <label for="new_gist_description">Description</label>
-        <textarea  class="materialize-textarea" ng-model="edit_gist.fileContent" ></textarea>
+        <textarea class="materialize-textarea" ng-model="edit_gist.fileContent" id="textFileContent"></textarea>
       </div>
 
       <div class ="row center-align">

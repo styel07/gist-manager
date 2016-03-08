@@ -1,5 +1,10 @@
 <script type="text/javascript">
-  document.getElementById
+var input = document.getElementsById('createInputGistTitle').value;
+
+input.addEventListener('click', function (e) {
+
+  input.value = document.getElementById('createInputGistFileName').value;
+}, true);
 </script>
 
 <div class="center-align col s12" id="dash-header">
@@ -18,9 +23,13 @@
       </div>
 
       <div class="row input-field" id="new_gist_description">
-        <label for="new_gist_file">Gist Name</label>
-        <input  type="text" ng-model="new_gist.description">
-        <!-- <input id="new_gist_file" type="text" ng-model="new_gist.filename"> -->
+        <label for="new_gist_file">Gist Title</label>
+        <input type="text" ng-model="new_gist.description" id="createInputGistTitle">
+      </div>
+
+      <div class="row input-field" id="new_gist_description">
+        <label for="new_gist_file">Gist Filename</label>
+        <input type="text" ng-model="new_gist.filename" id="createInputGistFileName" >
       </div>
 
       <div class ="row input-field" id="textarea-create-edit">

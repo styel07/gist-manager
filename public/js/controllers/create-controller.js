@@ -7,7 +7,7 @@ angular.module('gistApp')
     ($scope, $cookies, GistService, $window, authorized) => {
       var userCookie = $cookies.get('access_token');
 
-       $scope.process_done = () => {
+      $scope.process_done = () => {
         $window.location.href = '/#/dashboard';
       };
 
