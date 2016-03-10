@@ -38,7 +38,8 @@ angular.module('gistApp')
             };
           });
       } else {
-        $window.location.href = '/#/';
+        console.log('not logged in');
+        $window.location.href = '/';
       }
     }
   ]);
