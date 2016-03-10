@@ -35,7 +35,7 @@ router.get('/github/callback', (req,res) => {
         // everthing worked
         // get token
         // send token back to client
-        res.redirect('/#/auth_token/' + access_token);
+        res.redirect('/auth_token/' + access_token);
       }
     });
 });
