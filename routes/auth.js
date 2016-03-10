@@ -7,7 +7,7 @@ var oauth2 = require('./../index.js');
 // STEP 1: get the providers Auth URL
 router.get('/login', (req,res) => {
   var authURL = oauth2.getAuthorizeUrl({
-    redirect_uri : 'https://gist-manager-app.herokuapp.com/auth/github/callback',
+    redirect_uri : 'https://secret-lowlands-80390.herokuapp.com/auth/github/callback',
     scope : [ 'gist' ],
     state : 'Authorize' + Math.round(Math.random() * 999999)
   });
@@ -24,7 +24,7 @@ router.get('/github/callback', (req,res) => {
   oauth2.getOAuthAccessToken(
     code,
     {
-      redirect_uri : 'https://gist-manager-app.herokuapp.com/auth/github/callback'
+      redirect_uri : 'https://secret-lowlands-80390.herokuapp.com/auth/github/callback'
     },
     (err, access_token, refresh_token, results) => {
       if (err) {
