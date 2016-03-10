@@ -16,7 +16,7 @@ const oauth2 = module.exports = new OAuth2(
 var auth = require('./routes/auth');
 var gists = require('./routes/gists');
 
-app.set('view engine', 'html');
+// app.set('view engine', 'html');
 app.use(bodyParser.urlencoded({ extended : true })); // gives the ability body parser
 app.use(bodyParser.json()); // gives the ability body parser
 app.use(methodOverride((req,res) => {
@@ -24,6 +24,7 @@ app.use(methodOverride((req,res) => {
     var method = req.body._method;
 
     delete req.body._method;
+
     return method;
   }
 }));
