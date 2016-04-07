@@ -96,9 +96,6 @@ z-index:1;
   }
 }
 
-#right-panel {
-  border-left: 2px dashed #B6B6B6;
-}
 // ------------- Search Bar
 #search:placeholder{
   color: #000;
@@ -136,6 +133,12 @@ li.collection-item.ng-binding.ng-scope {
     background-color: #C8E6C9;
   }
 }
+
+// Left Panel
+#left-panel {
+  border: 1px dashed #B6B6B6;
+}
+
 // Right Panel
 #right-panel {
   background-color: #FFF;
@@ -221,11 +224,7 @@ p#gistFileName {
 .nav-wrapper {
   background-color: #388E3C;
 }
-@media screen and (max-width: 480px) {
-    .tagline {
-        font-size: 14px;
-    }
-}
+
 footer.page-footer {
   margin-top: 0px;
   padding-top:0px;
@@ -285,4 +284,16 @@ h3.input-field {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .tagline {
+      font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width:479px) {
+  #left-panel {
+    border: none;
+  }
 }
