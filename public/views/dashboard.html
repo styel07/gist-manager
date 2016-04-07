@@ -23,7 +23,7 @@
 
         <a href="#">
           <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
-             <i class="material-icons" ng-href="/#/edit/{{ displayGist.id }}">mode_edit</i>
+             <i class="material-icons" ng-click="/#/edit/{{ displayGist.id }}">mode_edit</i>
 
              {{ gist.description }}
             <li ng-repeat="file in gist.files">{{ file.filename }}</li>
