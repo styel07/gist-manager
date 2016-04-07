@@ -8,17 +8,24 @@
 <div class="container">
 
   <div class="row" id="collection-article">
-    <div class="col s10 offset-s1 m4 l3" id="left-panel">
+    <div class="col s12 m4 l3" id="left-panel">
 
       <ul class="collection">
 
-          <li class="collection-item" id="search">
-            <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
-          </li>
+        <li class="collection-item" id="search">
+          <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
+        </li>
+        <li class="collection-item" id="add">
+          <a class="waves-effect waves-light btn create" ng-href="/#/create">
+            Create
+          </a>
+        </li>
 
         <a href="#">
           <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
-            {{ gist.description }}
+             <i class="material-icons" ng-href="/#/edit/{{ displayGist.id }}">mode_edit</i>
+
+             {{ gist.description }}
             <li ng-repeat="file in gist.files">{{ file.filename }}</li>
           </li>
         </a>
@@ -27,7 +34,7 @@
 
     </div>
 
-    <div class="col s10 offset-s1 m8 l9" id="right-panel">
+    <div class="col s12 m8 l9" id="right-panel">
         <div class="row" id="btn-container-article">
             <span class="col s6 center-align btn-create-edit">
               <a class="waves-effect waves-light btn create" ng-href="/#/create">
