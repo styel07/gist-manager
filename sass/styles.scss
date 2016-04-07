@@ -1,6 +1,8 @@
 $light-green: #4CAF50;
 $dark-green: #388E3C;
 $grey: #B6B6B6;
+$light-blue: #4B8486;
+$dark-blue: #165356;
 // ------------- Body
 body {
   background-color : $light-green;
@@ -163,11 +165,13 @@ height:40px;
 }
 
 .btn {
+  background-color: $light-blue;
+
   &.create, &.edit, &.back-btn, &.delete, &.save{
     font-size: 1.6em;
   }
   &:hover {
-    background-color: #165356; // dark blue
+    background-color: $dark-blue; // dark blue
   }
   &.create, &.edit {
     width:100%;
