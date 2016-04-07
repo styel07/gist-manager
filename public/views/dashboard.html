@@ -15,20 +15,14 @@
         <li class="collection-item" id="search">
           <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
         </li>
-        <li class="collection-item" id="add">
-          <a class="waves-effect waves-light btn create" ng-href="/#/create">
+        <li class="collection-item" id="add" ng-click="/#/create">
             Create
-          </a>
         </li>
 
-        <a href="#">
-          <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
-             <i class="material-icons" ng-click="/#/edit/{{ displayGist.id }}">mode_edit</i>
-
-             {{ gist.description }}
-            <li ng-repeat="file in gist.files">{{ file.filename }}</li>
-          </li>
-        </a>
+        <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
+           {{ gist.description }}
+          <li ng-repeat="file in gist.files">{{ file.filename }}</li>
+        </li>
 
       </ul>
 
@@ -48,11 +42,11 @@
 
         <div class="row view-gist-info">
           <div ng-repeat="file in displayGist.files">
-            <div class="col s6">
+            <div class="col s9">
                 <h4 id="gistTitle">{{ displayGist.description }}</h4>
             </div>
-            <div class="col s6">
-              <a class="waves-effect waves-light btn edit" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
+            <div class="col s3">
+              <a class="waves-effect waves-light btn edit" ng-href="/#/edit/{{ displayGist.id }}"><i class="material-icons" ng-click="/#/edit/{{ displayGist.id }}">mode_edit</i>Edit</a>
             </div>
             <div class="col s12">
                 <p id="gistFileName">File Name: {{ file.filename }}</p>
