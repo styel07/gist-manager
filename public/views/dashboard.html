@@ -12,18 +12,13 @@
 
       <ul class="collection">
 
-        <li class="collection-item" id="search">
-          <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
-        </li>
-        <li class="collection-item" id="add" ng-href="/#/create">
-          <a class="waves-effect waves-light btn create" >
-            Create
-          </a>
-        </li>
+          <li class="collection-item" id="search">
+            <input id="searchBar" type="text" placeholder="Search Gist" ng-model="searchGist" />
+          </li>
 
         <a href="#">
           <li ng-click="display(gist.id)" class="collection-item" ng-repeat="gist in gists | filter:searchGist">
-             {{ gist.description }}
+            {{ gist.description }}
             <li ng-repeat="file in gist.files">{{ file.filename }}</li>
           </li>
         </a>
@@ -33,31 +28,24 @@
     </div>
 
     <div class="col s12 m8 l9" id="right-panel">
-        <!-- <div class="row" id="btn-container-article">
+        <div class="row" id="btn-container-article">
             <span class="col s6 center-align btn-create-edit">
               <a class="waves-effect waves-light btn create" ng-href="/#/create">
                 Create
               </a>
             </span>
             <span class="col s6 center-align btn-create-edit">
-
+              <a class="waves-effect waves-light btn edit" ng-href="/#/edit/{{ displayGist.id }}">
+                Edit
+              </a>
             </span>
-        </div> -->
+        </div>
 
         <div class="row view-gist-info">
           <div ng-repeat="file in displayGist.files">
-            <div class="col s9">
-                <h4 id="gistTitle">{{ displayGist.description }}</h4>
-            </div>
-            <div class="col s3">
-              <a class="waves-effect waves-light btn edit" ng-href="/#/edit/{{ displayGist.id }}">Edit</a>
-            </div>
-            <div class="col s12">
-                <p id="gistFileName">File Name: {{ file.filename }}</p>
-            </div>
-            <div class="col s12">
-                <p id="gistFileContent">{{ file.content }}</p>
-            </div>
+              <h4 id="gistTitle">{{ displayGist.description }}</h4>
+              <p id="gistFileName">File Name: {{ file.filename }}</p>
+              <p id="gistFileContent">{{ file.content }}</p>
           </div>
         </div>
     </div>
